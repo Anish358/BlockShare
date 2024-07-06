@@ -5,6 +5,7 @@ const Display = ({ contract, account }) => {
   const getdata = async () => {
     let dataArray;
     const Otheraddress = document.querySelector(".address").value;
+    console.log(Otheraddress);
     try {
       if (Otheraddress) {
         dataArray = await contract.display(Otheraddress);
@@ -20,14 +21,12 @@ const Display = ({ contract, account }) => {
     if (!isEmpty) {
       const str = dataArray.toString();
       const str_array = str.split(",");
-      // console.log(str);
-      // console.log(str_array);
       const images = str_array.map((item, i) => {
         return (
-          <a href={item} key={i} target="_blank">
+          <a href={item} key={i} target="_blank" rel="noreferrer">
             <img
               key={i}
-              src={`https://gateway.pinata.cloud/ipfs/${item.substring(6)}`}
+              src={`${item.substring(6)}`}
               alt="new"
               className="image-list"
             ></img>

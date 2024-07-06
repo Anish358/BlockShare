@@ -16,10 +16,8 @@
 }
 
 .button {
-  background-color: initial;
-  background-image: linear-gradient(-180deg, #009ffd, #2a2a72);
-  border-radius: 6px;
-  color: #ffffff;
+  border-radius: 20px;
+  color: black;
   padding: 5px 10px;
   border: none;
   font-size: 16px;
@@ -36,8 +34,5 @@
   height: 30px;
   width: 330px;
   text-align: center;
-}
-
-input[type="text"]:focus {
-  background-color: lightblue;
+  border-radius: 5px;
 }
